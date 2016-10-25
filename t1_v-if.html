@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t1_v-if</title>
+    <script src="../vue1.js"></script>
+</head>
+<body>
+<div id="app">  
+    <div v-if="abc">{{abc.a}}</div>  
+</div>  
+<script>  
+    var vm = new Vue({  
+        el: '#app',  
+        data: {  
+            abc: {  
+                a: "1"  
+            }  
+        }  
+    })
+</script>    
+</body>
+</html>

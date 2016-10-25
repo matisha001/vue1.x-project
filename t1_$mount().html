@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>t1_$mount()</title>
+	<script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">  
+    {{a}}  
+</div>  
+<button onclick="test()">挂载</button>  
+<script>  
+    var obj = {a: 1}  
+    var vm = new Vue({  
+        data: obj  
+    })  
+    function test() {  
+        vm.$mount("#app");  
+    }  
+</script> 
+</body>
+</html>

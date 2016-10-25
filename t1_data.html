@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>t1_data</title>
+	<script src="../vue1.js"></script>
+</head>
+<body>
+<div id="app">  
+    {{a}}  
+</div>  
+<button onclick="add()">+1</button>  
+<script>  
+    // var obj = {a: 1}  
+    var obj = {b: 1} 
+    var vm = new Vue({  
+        el: '#app',  
+        data: obj  
+    })  
+    function add() {  
+        obj.a=2;
+    } 
+    //在Vue实例创建后，添加新的属性到实例上，是不会触发视图更新的。 
+</script>  
+</body>
+</html>

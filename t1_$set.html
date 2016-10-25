@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t1_$set</title>
+    <script src="../vue1.js"></script>
+</head>
+<body>
+<div id="app">  
+    <div v-for="item in items" track-by="$index">{{item}}</div>  
+</div>  
+<button onclick="change">change</button> 
+<script>  
+    var vm = new Vue({  
+        el: '#app',  
+        data: {  
+            items: {  
+                a: "1",  
+                b: "2",  
+                c: "3"    
+            }
+        }  
+    })  
+     vm.$set('items.b',"456721890"); 
+     //vm.items.$set('a',"2435");
+    // vm.items.$set(0, {name: "test"});    
+</script>
+</body>
+</html>

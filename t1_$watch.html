@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>t1_$watch</title>
+	<script src="../vue1.js"></script>
+</head>
+<body>
+<div id="app">  
+    {{a}}  
+</div>  
+<button>add</button>  
+<script>  
+    var vm = new Vue({  
+        el: '#app',  
+        data: {a: 1} 
+    })  
+    vm.$watch("a",function(newVal, oldVal){
+        console.log(newVal+'------'+oldVal)
+    }) 
+    //在Vue实例创建后，添加新的属性到实例上，是不会触发视图更新的。 
+</script>  
+</body>
+</html>

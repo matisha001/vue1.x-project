@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t1_class</title>
+    <script src="../vue1.js"></script>
+    <style>  
+    .green {  
+        background-color: green;  
+    }  
+    .red {  
+        background-color: red;  
+    }  
+</style> 
+</head>
+<body>
+<div id="app">  
+    <div v-bind:class="itsClass">背景颜色</div>  
+    <button @click="change">变色</button>  
+</div>  
+<script>  
+    var vm = new Vue({  
+        el: '#app',  
+        data: {  
+            itsClass: {  
+                green: true  
+            }  
+        },  
+        methods: {  
+            change: function () {  
+                this.itsClass.green = !this.itsClass.green;  
+                this.itsClass.red = !this.itsClass.red;  
+            }  
+        }  
+    })  //虽然原本itsClass这个变量并没有red这个属性，但后续添加这个属性也会在该div里
+    //添加red这个class类名。颜色从绿色变为红色。
+</script>    
+</body>
+</html>

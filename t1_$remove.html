@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t1_$remove</title>
+    <script src="../vue1.js"></script>
+</head>
+<body>
+<div id="app">  
+    <div v-for="item in items" track-by="$index">{{item.name}}</div>  
+</div>  
+<button onclick="change()">change</button> 
+<script>  
+    var test = {name: "test"};  
+    var vm = new Vue({  
+        el: '#app',  
+        data: {  
+            items: [  
+                {name: "a"},  
+                {name: "b"},  
+                {name: "c"}  
+            ]  
+        }  
+    })  
+    vm.items.push(test);  
+    function change() {  
+        vm.items.$remove(test);  
+        //vm.items.$remove({name: "test"}); //注意，这种写法是错误的  
+    }  
+</script>   
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t1_class_2</title>
+    <script src="../vue1.js"></script>
+<style>  
+    .fontGreen {  
+        color: green;  
+        font-size: 40px; 
+    }  
+  
+    .backRed {  
+        background-color: #ccc;  
+    }  
+  
+    .fontSize {  
+        font-size: 50px;  
+    }  
+  
+</style>
+</head>
+<body>
+  
+<div id="app">  
+    <div v-bind:class="[g,r?r:s]">颜色</div>  
+    <button @click="change">变换</button>  
+</div>  
+<script>  
+    var vm = new Vue({  
+        el: '#app',  
+        data: {  
+            g: "fontGreen",  
+            r: "backRed",  
+            s: "fontSize"  
+        },  
+        methods: {  
+            change: function () {  
+                this.r = !this.r;  
+            }  
+        }  
+    })  
+</script>
+</script>    
+</body>
+</html>
